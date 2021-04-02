@@ -16,4 +16,3 @@ jobs:
           heroku_email: "moises1695@gmail.com"
           buildpack: "https://git.heroku.com/java-ci-cd-actions.git"
           justlogin: true
-      - run: heroku auth:whoami
