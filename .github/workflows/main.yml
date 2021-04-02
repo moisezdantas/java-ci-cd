@@ -6,13 +6,14 @@ on:
 
 jobs:
   build:
+  
     runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v2
+      - name: Deploy to Heroku
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "java-ci-cd-actions"
-          heroku_email: "moises1695@gmail.com"
-          buildpack: "https://git.heroku.com/java-ci-cd-actions.git"
-          justlogin: true
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+          heroku_email: ${{secrets.HEROKU_API_EMAIL}}
