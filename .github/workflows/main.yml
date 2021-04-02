@@ -14,3 +14,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "java-ci-cd-actions"
           heroku_email: "moises1695@gmail.com"
+          buildpack: "https://git.heroku.com/java-ci-cd-actions.git"
