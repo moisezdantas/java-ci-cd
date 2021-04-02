@@ -3,6 +3,8 @@ name: CI/CD FOR DEV DEPLOY
 on:
   push:
     branches: [ dev ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build:
@@ -15,4 +17,4 @@ jobs:
           heroku_app_name: "java-ci-cd-actions"
           heroku_email: "moises1695@gmail.com"
           usedocker: true
-          
+
